@@ -24,7 +24,6 @@ let dome = new Zdog.Hemisphere({
   backface: darkblue,
   rotate: { x: -TAU/4 },
   translate: { y: 1 },
-  
 });
 
 
@@ -32,11 +31,14 @@ let box2 = new Zdog.Box({
   addTo: illo,
   width: 380,
   height: 80,
-  depth: 10,
-  stroke:10,
-  translate: { y: -50, z: -80  },
+  depth: 15,
+  stroke: 10,
+  color:white,
+  translate: { y: -40, z: -100  },
   stroke: false,
   color: 'url("#gradientA")', // default face color
+  leftFace: 'darkblue',
+  rightFace:'darkblue',
 });
 
 
@@ -55,9 +57,6 @@ let box = new Zdog.Box({
 });
 
 
-
-
-
 // add circle
 new Zdog.Ellipse({
   addTo: illo,
@@ -66,7 +65,19 @@ new Zdog.Ellipse({
   stroke: 2,
   color: 'url("#gradientA")',
   fill:true,
-  translate: { y: -80, z: -70  },
+  translate: { y: -80, z: -85  },
+});
+
+let dome2 = new Zdog.Hemisphere({
+  addTo: illo,
+  diameter: 80,
+  // fill enabled by default
+  // disable stroke for crisp edge
+  stroke: false,
+  color: 'url("#gradientA")',
+  backface: 'url("#gradientA")',
+  translate: { y: -80, z: -85  },
+    rotate: { y: -TAU/2 },
 });
 
 
@@ -75,7 +86,7 @@ new Zdog.Rect({
   width: 80,
   height: 120,
   translate: { y: -60 },
-  stroke: 1,
+  stroke: 3,
   color: white,
   fill: false,
 });
@@ -85,7 +96,7 @@ new Zdog.Rect({
   width: 160,
   height: 200,
   translate: { y: -100, z: 100  }, 
-  stroke: 1,
+  stroke: 3,
   color: white,
   fill: false,
 });
@@ -95,7 +106,7 @@ new Zdog.Rect({
   width: 320,
   height: 300,
   translate: { y: -150, z: 200  },
-  stroke: 1,
+  stroke: 3,
   color: white,
   fill: false,
 });
@@ -140,7 +151,6 @@ new Zdog.Rect({
 // });
 
 
-
 // ----- animate ----- //
 
 function animate() {
@@ -175,4 +185,3 @@ new Zdog.Dragger({
     scene.rotate.y = dragStartRY - ( moveX / minSize * TAU );
   },
 });
-
