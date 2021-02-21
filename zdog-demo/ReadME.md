@@ -3,7 +3,4 @@
 
 
 
-
-
-
-![2021-02-20-23-50-10](F:\Pluralsight\Web\React\practise\zdog\zdog-demo\2021-02-20-23-50-10.gif)
+![2021-02-20-23-50-10](https://github.com/DanqingYANG/zdog-demo/blob/master/zdog-demo/2021-02-20-23-50-10.gif)
